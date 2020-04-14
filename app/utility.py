@@ -1,6 +1,8 @@
 import re
 import pandas as pd
 import nltk
+nltk.download('stopwords')
+
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
