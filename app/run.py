@@ -1,3 +1,5 @@
+from app import app
+
 import json
 import plotly
 import pandas as pd
@@ -15,7 +17,6 @@ from sqlalchemy import create_engine
 import random
 from wordcloud import WordCloud, STOPWORDS
 from nltk.corpus import stopwords
-
 
 import utility
 from utility import tokenize, StartingVerbExtractor, TextLenghExtractor
@@ -119,10 +120,11 @@ def go():
         classification_result=classification_results
     )
 
-
+'''
 def main():
     app.run(host='0.0.0.0', port=3001, debug=True)
 
 
 if __name__ == '__main__':
     main()
+'''
