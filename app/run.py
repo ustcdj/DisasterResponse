@@ -1,3 +1,4 @@
+# 1st app is folder, 2nd app is flask?
 from app import app
 
 import json
