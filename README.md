@@ -13,11 +13,11 @@ This project is to analyze disaster data from Figure Eight to build a model for 
 
 A machine learning pipeline was created to categorize the disaster messages so that the messages can be sent to appropriate disaster relief agencies.
 
-A web app where an emergency worker can input a new message and get classification results in several categories was developed. The web app  also displays visualizations of the data.
+A [web app](https://dj-disaster-response-webapp.herokuapp.com/) where an emergency worker can input a new message and get classification results in several categories was developed. The web app  also displays visualizations of the data.
 
 ## 2. Installation
 
-The code was developed using the Anaconda distribution of Python, versions 3.8.1. Python libraries used are `numpy`, `pandas`, `sqlalchemy`, `plotly`, `sklearn`, `nltk`, `pickle`, `utility`, `flask`
+The code was developed using the Anaconda distribution of Python, versions 3.8.1. Python libraries used are `numpy`, `pandas`, `sqlalchemy`, `plotly`, `sklearn`, `nltk`, `pickle`, `utility`, `flask`, `wordcloud`
 
 
 ## 3. File Descriptions
@@ -25,7 +25,7 @@ The code was developed using the Anaconda distribution of Python, versions 3.8.1
 In the Project Workspace, you'll find a data set containing real messages that were sent during disaster events.
 
 * `app`
-  * `template`
+  * `templates`
     * `master.html` - main page of web app
     * `go.html` - classification result page of web app
   * `utility.py` - customized transformers and functions
@@ -62,7 +62,7 @@ In the Project Workspace, you'll find a data set containing real messages that w
 
 
 ## 5. Screenshots
-### 5a. Home Page
+### 5a. [Home Page](https://dj-disaster-response-webapp.herokuapp.com/)
 <img src="images/1.jpg" width=800>
 
 ### 5b. Message Categories
