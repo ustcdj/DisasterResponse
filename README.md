@@ -1,26 +1,38 @@
 # Disaster Response Pipeline Project
 
 - [Table of Contents](#Table_of_Contents)
-  - [1. Background](#1-background)
-  - [2. Installation](#2-installation)
-  - [3. File Descriptions](#3-file-descriptions)
-  - [4. Instructions](#4-Instructions)
-  - [5. Screenshots](#5-Screenshots)
-  - [6. Acknowledgements](#6-Acknowledgements)
+  - [Introduction](#Introduction)
+  - [Installation](#installation)
+  - [File Descriptions](#file-descriptions)
+  - [Instructions](#Instructions)
+  - [Screenshots](#Screenshots)
+  - [Acknowledgements](#Acknowledgements)
 
-## 1. Background
-This project is to analyze disaster data from Figure Eight to build a model for an API that classifies disaster messages.
+## Introduction
+During disaster events, sending messages to appropriate disaster relief agencies on a timely manner is critical. Using natural language processing and machine learning, I built a model for an API that classifies disaster messages and also a webapp for emergency works.
 
-A machine learning pipeline was created to categorize the disaster messages so that the messages can be sent to appropriate disaster relief agencies.
+- First, I developed an ETL pipeline that can:
+	* Loads the messages and categories datasets
+	* Merges the two datasets
+	* Cleans the data
+	* Stores it in a SQLite database
 
-A [web app](https://dj-disaster-response-webapp.herokuapp.com/) where an emergency worker can input a new message and get classification results in several categories was developed. The web app  also displays visualizations of the data.
+- Then, I created a machine learning pipeline that can:
+	* Loads data from the SQLite database
+	* Splits the dataset into training and test sets
+	* Builds a text processing and machine learning pipeline
+	* Trains and tunes a model using GridSearchCV
+	* Outputs results on the test set
+	* Exports the final model as a pickle file
 
-## 2. Installation
+- Finally, A **[WEB APP](https://dj-disaster-response-webapp.herokuapp.com/)** where an emergency worker can input a new message and get classification results in several categories was developed. The web app  also displays visualizations of the data.
+
+## Installation
 
 The code was developed using the Anaconda distribution of Python, versions 3.8.1. Python libraries used are `numpy`, `pandas`, `sqlalchemy`, `plotly`, `sklearn`, `nltk`, `pickle`, `utility`, `flask`, `wordcloud`
 
 
-## 3. File Descriptions
+## File Descriptions
 
 In the Project Workspace, you'll find a data set containing real messages that were sent during disaster events.
 
@@ -46,7 +58,7 @@ In the Project Workspace, you'll find a data set containing real messages that w
 
 * `README.md`
 
-## 4. Instructions:
+## Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database <br>
@@ -58,19 +70,19 @@ In the Project Workspace, you'll find a data set containing real messages that w
 2. Run the following command in the app's directory to run your web app. <br>
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+3. Go to **http://0.0.0.0:3001/**
 
-4. The webapp files are in the [webapp branch](https://github.com/ustcdj/DisasterResponse/tree/webapp) <br>
-The web app is at [webapp homepage](https://dj-disaster-response-webapp.herokuapp.com/)
+4. The webapp files are in the **[webapp branch](https://github.com/ustcdj/DisasterResponse/tree/webapp)** <br>
+The web app is at **[webapp homepage](https://dj-disaster-response-webapp.herokuapp.com/)**
 
 
-## 5. Screenshots
-### 5a. Home Page
+## Screenshots
+### 1. Home Page
 <img src="images/1.jpg" width=800>
 
-### 5b. Message Categories
+### 2. Message Categories
 <img src="images/2.jpg" width=800>
 
-## 6. Acknowledgements
+## Acknowledgements
 
 Special thanks to [Figure Eight](https://www.figure-eight.com/) for providing the dataset.
